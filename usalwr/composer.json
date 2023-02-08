@@ -1,0 +1,5 @@
+{
+  "require": {
+      "vendor/stripe/stripe-php": "^7.100"
+  }
+}
