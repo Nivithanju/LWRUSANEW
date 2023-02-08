@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>LoveWithoutReason</title>
+	<link rel="stylesheet" href="../global.css" />
+	<!-- <link href="images/favicon.ico" rel="icon"> -->
+	<!----mobile-->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+	<script src="../client.js" defer></script>
+	<link href="../images/favicon.ico" rel="icon">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/animate.min.css">
+	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="../css/tooltipster.min.css">
+	<link rel="stylesheet" href="../css/cubeportfolio.min.css">
+	<link rel="stylesheet" href="../css/revolution/navigation.css">
+	<link rel="stylesheet" href="../css/revolution/settings.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel='stylesheet' id='parent-style-css' href='../css/stylea78f.css?ver=5.7.1' type='text/css' media='all' />
+	<link rel='stylesheet' href='../css/elementor-icons.minb683.css?ver=5.12.0' media='all' />
+	<link rel='stylesheet' href='../css/frontend-legacy.min3d36.css?ver=3.3.1' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css' href='../css/frontend.min3d36.css?ver=3.3.1' media='all' />
+	<link rel='stylesheet' id='elementor-pro-css' href='../css/frontend.min521d.css?ver=3.0.10' media='all' />
+	<script>
+		$(document).scroll(function () {
+			let scrollval = $(this).scrollTop()
+			console.log(scrollval)
+			if (scrollval > 400) {
+				$('.donate-slide').fadeIn();
+			} else {
+				$('.donate-slide').fadeOut();
+			}
+		})
+	</script>
+	<style>
+		@media (max-width: 780px) {
+			.modal-content {
+
+				width: 95% !important;
+				margin-left: 13px !important;
+			}
+		}
+
+		@media(max-width: 760px) {
+			.col-lg-5 {
+				left: 0px !important;
+			}
+
+			div#order-1 {
+				order: 1;
+			}
+
+			div#order-2 {
+				order: 2;
+			}
+
+			div#order-3 {
+				order: 3;
+			}
+
+			div#order-4 {
+				order: 4;
+			}
+
+			div#order-5 {
+				order: 5;
+			}
+
+			div#order-6 {
+				order: 6;
+			}
+
+			#banner-heading {
+				font-size: 27px !important;
+				padding-left: 8px !important;
+
+			}
+
+			#donate-banner {
+				margin-left: -10px;
+			}
+
+			.the-500th {
+				margin-left: 30px !important
+			}
+		}
+
+		@media(max-width: 1024px) {
+			.the-500th {
+				left: -25px !important
+			}
+		}
+
+		/* font */
+		#font {
+			font-family: 'LiberationSans', sans-serif;
+		}
+
+		.donate-slide {
+			background: #fff none repeat scroll 0 0;
+			-webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+			-ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+			-o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+			position: fixed;
+			right: 0px;
+			text-align: center;
+			top: 65%;
+			transition: all 0.5s ease 0s;
+			width: 285px;
+			z-index: 999;
+		}
+
+		.donate-slide-head {
+			background: #7d0000 none repeat scroll 0 0;
+			padding: 13px 0;
+
+
+		}
+
+		.donate-slide-head h6,
+		.donate-slide-head h4 {
+			color: #ffffff;
+			font-weight: 600;
+			margin: 0px;
+			margin-left: -110px;
+			margin-top: 4px;
+			text-transform: uppercase;
+		}
+
+		.various-donate {
+			overflow: hidden;
+			padding: 22px 0;
+		}
+
+		.donate-trigger {
+			background: #7d0000 none repeat scroll 0 0;
+			border-right: 1px solid #fff;
+			cursor: pointer;
+			height: 54px;
+			left: -46px;
+			position: absolute;
+			top: 0;
+			width: 46px;
+			padding-top: 7px;
+		}
+
+		.donate-trigger i {
+			color: #ffffff;
+			font-size: 18px;
+			line-height: 42px;
+		}
+
+		.donate-trigger1 {
+			background: #fff none repeat scroll 0 0;
+			border-right: 1px solid #fff;
+			cursor: pointer;
+			height: 54px;
+			left: -46px;
+			position: absolute;
+			top: 0px;
+			width: 46px;
+			padding-top: 7px;
+		}
+
+		.donate-trigger1 i {
+			color: #1189d6;
+			font-size: 18px;
+			line-height: 42px;
+		}
+
+		.donate-slide.visible-palate {
+			right: -285px;
+		}
+
+		.donate-slide.visible-palate:hover {
+			right: -120px;
+		}
+
+		.fa-donate:before {
+			content: "\f4b9"
+		}
+	</style>
+	<!-- <link rel='stylesheet' id='parent-style-css' href='wp-content/themes/Divi/stylea78f.css?ver=5.7.1' type='text/css' media='all' />
+<link rel="stylesheet" id="et-core-unified-14-cached-inline-styles" href="wp-content/et-cache/14/et-core-unified-14-1618048429272.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" /> -->
+
+</head>
+
+<body class="gray-body">
+	<!--PreLoader-->
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="cssload-loader"></div>
+		</div>
+	</div>
+
+	<!-- <div id="myModalfront" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content1">
+            <div class="modal-header1">
+
+                <div class="img">
+                    <img src="images/index/lwrpopup.jpg" alt='quit' class='x' id='x' />
+
+                </div>
+                <button type="button" class="close" data-dismiss="modal" style="color:#fff">&times;</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+	<div class="donate-slide visible-palate" style="display: none;">
+		<div class="donate-trigger">
+			<ul class=" ">
+				<li>
+					<i class="flaticon-test-tube"></i>
+					<img src="../current/LWR1.png" alt="icon" class="menu-icon flaticon-test-tube">
+
+				</li>
+			</ul>
+
+		</div>
+		<div class="donate-slide-head">
+			<a data-toggle="modal" data-target="#myModal">
+				<h6>DONATE NOW </h6>
+			</a>
+		</div>
+	</div>
+
+	<!-- <div class="donate-slide visible-palate" style="display: none;">
+		<div class="donate-trigger" style="margin-top:-10em;padding-top:5px;background:grey">
+			<ul class=" ">
+				<li data-toggle="modal" data-target="#exampleModalqr">
+					<i class="flaticon-test-tube"></i>
+					<img src="../images/qr.png" alt="icon" class="menu-icon flaticon-test-tube">
+
+				</li>
+			</ul>
+
+		</div>
+		<div class="donate-slide-head" style="margin-top:-10em;background:grey">
+			<a data-toggle="modal" data-target="#exampleModalqr">
+				<h6>QR CODE</code> </h6>
+			</a>
+		</div>
+	</div> -->
+
+
+	<div id="paypalclick" class="donate-slide visible-palate" style="display: none;">
+		<div class="donate-trigger1">
+			<ul class=" ">
+				<li>
+					<i class="flaticon-test-tube"></i>
+					<img src="../images/paypal.png" alt="icon" class="menu-icon flaticon-test-tube"
+						style="bottom: 2px;">
+
+				</li>
+			</ul>
+
+		</div>
+		<div class="donate-slide-head" style="background-color: #fff;">
+			<a>
+				<h6 style="color: #1189d6;">Donate Now </h6>
+			</a>
+		</div>
+		<form id="ppl" action="https://www.paypal.com/biz/fund?id=NJMPFAWUKAHR4" method="post" target="_top"
+			style="display: none;">
+
+			<input name="hosted_button_id" type="hidden" value="5NVXVYD7PD3HS"><br>
+			<input title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" name="submit"
+				src="../www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" width="10 !important"
+				height="10">
+			<br>
+			<img loading="lazy" src="../www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1"
+				border="0">
+		</form>
+	</div>
+
+	<div class="formodal">
+		<div id="myModal" class="modal fade" role="main">
+
+			<div class="modal-dialog">
+
+
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<div class="donation-body">
+							<div id="sel" class="donation-subscription">
+								<a class="text-center active" id="s1" onclick="ActivateForm(1)">GIVE ONCE</a>
+								<a class="text-center" id="s2" onclick="ActivateForm(2)">MONTHLY</a>
+
+								<select style="margin-top: 8px;" id="billingCountry" onchange="selecctAccount(event)">
+								</select>
+							</div>
+
+							<form id="payment-form" style="display: block;">
+								<div class="tab">
+									<span class="form-header text-center">
+										<span>Choose an amount to give once</span>
+									</span>
+									<div class="amount-top">
+										<div id="amountselect" class="amount-body text-center">
+											<a class="button amt-btn button--grey-20"><span class="cs">$</span><span
+													id="at1">25</span></a>
+											<a class="button amt-btn button--grey-20 selected"><span
+													class="cs">$</span><span id="at2">50</span></a>
+											<a class="button amt-btn button--grey-20"><span class="cs">$</span><span
+													id="at3">100</span></a>
+											<a class="button amt-btn button--grey-20"><span class="cs">$</span><span
+													id="at4">1000</span></a>
+											<a class="button other-amt-btn button--grey-20">Other amount</a>
+											<div class="other-button donate-amt hidden">
+												<div class="input-container">
+													<span class="pre cs">$</span>
+													<input type="number" class="onlyamt" min="1" step=".01" value />
+												</div>
+											</div>
+										</div>
+										<div class="text-center">
+											<button class="button" id="donate-button" type="button"
+												onclick="nextPrev(1)">Donate Once</button>
+										</div>
+										<div class="text-center" style="margin-top: 10%;">
+											<a href="https://www.paypal.com/biz/fund?id=NJMPFAWUKAHR4"
+												style="color: #036;">Paythrough&nbsp;<img src="../images/paypal.png"
+													height="32px" width="32px" alt="paypal">&nbsp;PAYPAL</a>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="tab">
+									<span class="form-header text-center">
+										<span id="msg-amt"></span>
+									</span>
+									<div class="amount-top">
+										<div id="amountselect" class="amount-body text-center">
+											<div class="amt-name">
+												<div>
+													<input id="firstname" placeholder="FirstName" />
+												</div>
+												<div>
+													<input id="lastname" placeholder="LastName" />
+												</div>
+											</div>
+											<div class="amt-email">
+												<input id="email" placeholder="Email" type="email" />
+											</div>
+											<div id="card-element"></div>
+											<button class="button mb1" id="donate-button" type="button"
+												onclick="nextPrev(1)" style="margin: 25px auto;">NEXT</button>
+											<p id="card-error" role="alert"></p>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="tab">
+									<span class="form-header text-center">
+										<span id="msg-amt1"></span>
+									</span>
+									<div class="amount-top">
+										<div class="amount-body text-center">
+											<div class="edit-dtl" onclick="nextPrev(-1)">
+												<span class="ed-1">Edit card detail</span>
+											</div>
+											<input id="address" placeholder="Billing Address">
+											<input id="city" placeholder="City" class="wd-2">
+											<select id="state123" placeholder="State" class="wd-2"></select>
+											<input id="state" placeholder="State" class="wd-2">
+											<input id="zipcode" placeholder="Zipcode" class="wd-2">
+											<input id="description" name="description" placeholder="Comments"
+												class="wd-2">
+
+											<button class="button" id="submit">
+												<div class="spinner hidden" id="spinner"></div>
+												<span id="button-text">Pay now</span>
+											</button>
+											<p id="card-error1" role="alert"></p>
+
+											<p class="result-message hidden">
+												Payment successful
+												<a href="" target="_blank"></a> Refresh the page to pay again.
+											</p>
+										</div>
+									</div>
+								</div>
+							</form>
+
+
+							<form id="payment-form1" style="display: none;">
+								<div class="tab">
+									<span class="form-header text-center">
+										<span>Choose an amount to give per month</span>
+									</span>
+									<div class="amount-top">
+										<div id="amountselect1" class="amount-body text-center">
+											<a class="button amt-btn1 button--grey-20"><span class="cs">$</span>
+												<sapn id="at5">25</sapn><span><span class="uppercase">
+													</span>mo</span>
+											</a>
+											<a class="button amt-btn1 button--grey-20 selected"><span
+													class="cs">$</span>
+												<sapn id="at6">50</sapn><span><span><span class="uppercase">
+														</span>mo</span>
+											</a>
+											<a class="button amt-btn1 button--grey-20"><span class="cs">$</span>
+												<sapn id="at7">100</sapn><span><span><span class="uppercase">
+														</span>mo</span>
+											</a>
+											<a class="button amt-btn1 button--grey-20"><span class="cs">$</span>
+												<sapn id="at8">1000</sapn><span><span><span class="uppercase">
+														</span>mo</span>
+											</a>
+											<a class="button other-amt-btn1 button--grey-20">Other amount</a>
+											<div class="other-button1 donate-amt hidden">
+												<div class="input-container">
+													<span class="pre" class="cs">$</span>
+													<input type="number" class="onlyamt1" min="1" step=".01" value />
+													<span class="post"><span class="uppercase"> </span>mo</span>
+												</div>
+											</div>
+										</div>
+										<div class="text-center">
+											<button class="button" id="donate-button" type="button"
+												onclick="nextPrev1(1)">Donate Monthly</button>
+										</div>
+										<div class="text-center" style="color: #036;">
+											<a href="https://www.paypal.com/biz/fund?id=NJMPFAWUKAHR4">Paythrough
+												PAYPAL</a>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="tab">
+									<span class="form-header text-center">
+										<span id="msg-amtm"></span>
+									</span>
+									<div class="amount-top">
+										<div id="amountselect" class="amount-body text-center">
+											<div class="amt-name">
+												<div>
+													<input id="firstname1" placeholder="FirstName" />
+												</div>
+												<div>
+													<input id="lastname1" placeholder="LastName" />
+												</div>
+											</div>
+											<div class="amt-email">
+												<input id="email1" placeholder="Email" type="email" />
+											</div>
+											<div id="card-element1"></div>
+											<button class="button mb1" id="donate-button" type="button"
+												onclick="nextPrev1(1)" style="margin: 25px auto;">NEXT</button>
+											<p id="card-error" role="alert"></p>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="tab">
+									<span class="form-header text-center">
+										<span id="msg-amt1m"></span>
+									</span>
+									<div class="amount-top">
+										<div class="amount-body text-center">
+											<div class="edit-dtl" onclick="nextPrev1(-1)">
+												<span class="ed-1">Edit card detail</span>
+											</div>
+											<input id="address1" placeholder="Billing Address">
+											<input id="city1" placeholder="City" class="wd-2">
+											<select id="state1123" placeholder="State" class="wd-2"></select>
+											<input id="state1" placeholder="State" class="wd-2">
+											<input id="zipcode1" placeholder="Zipcode" class="wd-2">
+											<input id="description1" name="description" placeholder="Comments"
+												class="wd-2">
+											<!-- <input id="zipcode1" placeholder="Zipcode" class="wd-2"> -->
+											<button class="button" id="submit" style="margin: auto;">
+												<div class="spinner hidden" id="spinner1"></div>
+												<span id="button-text1">Pay now</span>
+											</button>
+											<p id="card-error11" role="alert"></p>
+											<p class="result-message1 hidden">
+												Payment succeessful
+												<a href="" target="_blank"></a> Refresh the page to pay again.
+											</p>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- preloader ends here -->
+		<!-- header -->
+		<header class="site-header" id="header">
+			<nav class="navbar navbar-expand-lg transparent-bg opacity-10  static-nav">
+				<div class="container">
+					<a class="navbar-brand" href="../index.html">
+						<img src="../images/LWRred.png" alt="logo" class="logo-default">
+						<img src="../images/LWRor.png" alt="logo" class="logo-scrolled">
+					</a>
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav nav-new ml-auto">
+
+							<li class="nav-item dropdown position-relative">
+								<a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"> WHERE WE WORK </a>
+								<div class="dropdown-menu" id="font">
+									<a class="dropdown-item" href="../India/index.html">India</a>
+									<a class="dropdown-item" href="../bangalore.html"
+										style="margin-left:10px">Bangalore</a>
+									<a class="dropdown-item" href="../mumbai.html" style="margin-left:10px">Mumbai</a>
+									<!-- <a class="dropdown-item" href="tezpur.html" style="margin-left:10px">Tezpur</a> -->
+									<a class="dropdown-item" href="../kenya/kenya.html">Kenya</a>
+									<a class="dropdown-item" href="../zimbabwe/zimbabwe.html">Zimbabwe</a>
+									<a class="dropdown-item" href="../usa/usa.html">USA</a>
+									<!-- <a class="dropdown-item" href="uganda.html">Uganda</a> -->
+								</div>
+							</li>
+
+							<li class="nav-item dropdown position-relative">
+								<!-- <a class="nav-link dropdown-toggle" href="whywedo.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> WHY WE DO IT</a> -->
+								<a class="nav-link dropdown-toggle" href="whywedo.html" href="javascript:void(0)"
+									class="get-involved">WHY WE DO IT</a>
+								<div class="dropdown-menu" id="font" style="padding-right:30px">
+									<a class="dropdown-item" href="../whywedo.html#mission">Our Mission</a>
+									<a class="dropdown-item" href="../whywedo.html#values">Our Values</a>
+									<a class="dropdown-item" href="../whywedo.html#strategy">Our Strategy</a>
+									<a class="dropdown-item" href="../whywedo.html#community">Community-Focused
+										Humanitarianism</a><a class="dropdown-item" href="../Susan_s Blogs.html">Susan's
+										Blog</a>
+									<!--  <a class="dropdown-item" href="blog-detail.html">Zimbabwe</a>
+                    <a class="dropdown-item" href="blog-detail.html">USA</a> -->
+								</div>
+							</li>
+
+							<li class="nav-item dropdown static">
+
+								<a class="nav-link dropdown-toggle" href=../Craniofacial.html" href="javascript:void(0)"
+									class="get-involved">WHAT WE DO</a>
+								<!-- <a class="nav-link dropdown-toggle active" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> WHAT WE DO </a> -->
+								<ul class="dropdown-menu megamenu" id="font">
+									<li>
+										<div class="container">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<a href="../Craniofacial.html">
+														<h5 class="dropdown-title bottom10"> Craniofacial Surgery </h5>
+													</a>
+													<a class="dropdown-item"
+														href="../Craniofacial.html#holistic">Holistic
+														Strategy </a>
+													<a class="dropdown-item" href="../Craniofacial.html#linking">Linking
+														Surgery And Trafficking </a>
+													<!-- <a class="dropdown-item" href="index-video.html"></a> -->
+												</div>
+												<!--  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <a class="dropdown-item" href="index-modern-agency.html">Modern Agency</a>
+                                    <a class="dropdown-item" href="index-classic-startup.html">Classic Startup</a>
+                                    <a class="dropdown-item" href="index-flat.html">Flat Version</a>
+                                    <a class="dropdown-item" href="index-innovative.html">Innovative Layout</a>
+                                </div> -->
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<a href="../humantrafficking.html">
+														<h5 class="dropdown-title bottom10"> Fight Human Trafficking
+														</h5>
+													</a>
+													<a class="dropdown-item"
+														href="../humantrafficking.html#project">Project Butterfly
+														Center</a>
+													<a class="dropdown-item "
+														href="../humantrafficking.html#butterfly">Disaster Relief
+														Management</a>
+													<!--  <a class="dropdown-item FHT" href="humantrafficking.html#disaster"><h5>Disaster Relief Management</h5></a> -->
+												</div>
+												<!--  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <a class="dropdown-item" href="index-parallax.html">Parallax Version</a>
+                                    <a class="dropdown-item" href="index-interactive-classic.html">Interactive Classic</a>
+                                    <a class="dropdown-item" href="index-design-studio.html">Design Studio</a>
+                                    <a class="dropdown-item" href="index-particles.html">Interactive Particles</a>
+                                </div> -->
+												<!-- <div class="col-lg-3 col-md-6 col-sm-12">
+                                   <h5 class="dropdown-title bottom10">
+                                   Disaster Relief Management</h5>
+                                </div> -->
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item dropdown static">
+								<!--  <a class="get-involved" href="getinvolved.html" href="javascript:void(0)"  >GET INVOLVED</a> -->
+								<a class="nav-link dropdown-toggle" href="../getinvolved.html" href="javascript:void(0)"
+									class="get-involved">GET INVOLVED</a>
+								<ul class="dropdown-menu megamenu" id="font">
+									<li>
+										<div class="container">
+											<div class="row" style="width:110%">
+												<div class="col-lg-3 col-md-6 col-sm-12" style="margin-left:-20px;">
+													<h5 class="dropdown-title bottom10"> Volunteer </h5>
+													<a class="dropdown-item" href="../medicalcamp/medicalcamp.html">Medical Camp</a>
+													<!-- <a class="dropdown-item" href="5krunforlife.html">5krunforlove</a> -->
+													<!-- <a class="dropdown-item" href="#">Gala</a> -->
+													<!-- <a class="dropdown-item" href="fundraising-5krun.html">Fundraiser</a> -->
+													<a class="dropdown-item" href="../event/event.html">Event Volunteer</a>
+													<a class="dropdown-item" href="../studentintern.html">Student
+														Intern</a>
+													<!-- <a class="dropdown-item" href="office support.html">Support</a> -->
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-12" style="margin-left:-50px;">
+													<a  href="../donate/index.html">
+														<h5 class="dropdown-title opacity-10"> Donate </h5>
+													</a>
+
+													<!-- <a class="dropdown-item" href="byproject.html">Accessible Journey Aid</a> -->
+													<a class="dropdown-item" href="../byproject.html?id=0#menu1">Craniofacial
+														Surgery</a>
+													<a class="dropdown-item" href="../byproject.html?id=1#menu2">Gift In
+														Honor
+														Of Philip</a>
+													<!-- <a class="dropdown-item" href="byproject.html">Disaster Relief Management</a> -->
+													<a class="dropdown-item" href="../byproject.html?id=2#menu3">Nourish
+														Hope</a>
+													<a class="dropdown-item" href="../byproject.html?id=3#menu4">Project
+														Butterfly Center</a>
+													<a class="dropdown-item" href="../byproject.html?id=4#menu5">Director's
+														Innovator Fund</a>
+													a class="dropdown-item" href="../sponsers/sponsors.html">Sponsors</a>
+													<!-- <a class="dropdown-item" href="byproject.html"> Project Butterfly Online Store</a> -->
+													<a class="dropdown-item" id="ppl1">Paythrough Paypal</a>
+
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-12" style="margin-left:20px;">
+													<h5 class="dropdown-title bottom10"> Events </h5>
+													<a class="dropdown-item" href="../5krun4love/5krun4love.html">5krun4love</a>
+													<a class="dropdown-item" href="../peoplenotproducts.html">People,
+														Not
+														Products</a>
+													<a class="dropdown-item" href="../dance/index.html">Father-Daughter Dance</a>
+													<!-- <a class="dropdown-item" href="#">Shine Fashion Show</a> -->
+													<!-- <a class="dropdown-item" href="#">Form An Online Fundraisers</a> -->
+													<!-- <a class="dropdown-item" href="#">Start Your Own Fundraiser Event</a> -->
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-12" style="margin-left:50px;">
+													<h5 class="dropdown-title bottom10"> Other </h5>
+
+
+													<a class="dropdown-item" href="../inkind/inkind.html">In-kind</a>
+
+													<a class="dropdown-item" href="../inkind.html#medical"
+														style="margin-left:10px">Medical Supplies</a>
+													<a class="dropdown-item" href="../inkind.html#goods"
+														style="margin-left:10px">Goods/Services</a>
+													<!--  <a class="dropdown-item" href="inkind.html#sponsorship" style="margin-left:10px">Sponserships</a> -->
+													<a class="dropdown-item"
+														href="../corporate partners.html">Partners</a>
+													<a class="dropdown-item" href="../vehicledonate.html">Vehicle
+														Donation</a>
+													<a class="dropdown-item" href="../personalproperty.html">Personal
+														Property</a>
+													<a class="dropdown-item" href="../legacy.html">Legacy/Planned
+														Gifts</a>
+
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item ">
+								<a class="nav-link " href="../ourstory/ourstory.html" id="font"> OUR STORY </a>
+
+							</li>
+
+
+
+
+						</ul>
+					</div>
+				</div>
+				<!--side menu open button-->
+				<a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+					<span></span> <span></span> <span></span>
+				</a>
+			</nav>
+			<!-- side menu -->
+			<div class="side-menu opacity-0 gradient-bg">
+				<!-- <div class="overlay"></div> -->
+				<div class="inner-wrapper">
+					<span class="btn-close btn-close-no-padding" id="btn_sideNavClose"><i></i><i></i></span>
+					<nav class="side-nav w-100">
+						<ul class="navbar-nav">
+
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#sideNavPages1">
+									WHERE WE WORK <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="sideNavPages1" class="collapse sideNavPages">
+									<ul class="navbar-nav">
+										<li class="nav-item">
+											<a class="nav-link" href="../bangalore.html">Bangalore</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../mumbai.html">Mumbai</a>
+										</li>
+										<li class="nav-item">
+											<!-- <a class="nav-link" href="tezpur.html">Tezpur</a> -->
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../kenya.html">Kenya</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../zimbabwe.html">Zimbabwe</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../usa.html">USA</a>
+										</li>
+										<li class="nav-item">
+											<!-- <a class="nav-link" href="uganda.html">Uganda</a> -->
+										</li>
+									</ul>
+								</div>
+							</li>
+
+
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#sideNavPages2">
+									WHY WE DO <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="sideNavPages2" class="collapse sideNavPages">
+									<ul class="navbar-nav">
+										<li class="nav-item">
+											<a class="nav-link" href="../whywedo.html#mission">our mission</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../whywedo.html#values">our values</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../whywedo.html#strategy">Our Strategy</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../whywedo.html#community">community focused
+												<br>humanitarianism</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../Susan_s Blogs.html">Susan's Blog</a>
+										</li>
+							</li>
+
+						</ul>
+				</div>
+				</li>
+
+
+				<li class="nav-item">
+					<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#sideNavPages3">
+						WHAT WE DO <i class="fas fa-chevron-down"></i>
+					</a>
+					<div id="sideNavPages3" class="collapse sideNavPages">
+						<ul class="navbar-nav mt-1">
+
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-10">
+									craniofacial Surgery <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-10" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<li class="nav-item">
+											<a class="nav-link" href="../Craniofacial.html#holistic">Holistic
+												Strategy</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../Craniofacial.html#linking">linking
+												Surgery and Trafficking</a>
+										</li>
+
+
+
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-9">
+									Fight Human Trafficking <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-9" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<li class="nav-item">
+											<a class="nav-link" href="../humantrafficking.html#project">project
+												butterfly center</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../humantrafficking.html#butterfly">Disaster
+												Relief
+												Management</a>
+										</li>
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="humantrafficking.html#disaster">disaster relief management</a>
+                                            </li> -->
+
+									</ul>
+								</div>
+							</li>
+
+
+
+
+
+
+						</ul>
+					</div>
+				</li>
+
+
+				<li class="nav-item">
+					<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#sideNavPages4">
+						GET INVOLVED <i class="fas fa-chevron-down"></i>
+					</a>
+					<div id="sideNavPages4" class="collapse sideNavPages">
+						<ul class="navbar-nav mt-2">
+
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-4">
+									Volunteer <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-4" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<li class="nav-item">
+											<a class="nav-link" href="../medicalcamp.html">Medical Camp</a>
+										</li>
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="5krunforlife.html">5krunforlove</a>
+                                            </li> -->
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="#">gala</a>
+                                            </li> -->
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="fundraising-5krun.html">fundraiser</a>
+                                            </li> -->
+										<li class="nav-item">
+											<a class="nav-link" href="../event.html">Event volunteer</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../studentintern.html">student intern</a>
+										</li>
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="office support.html">support</a>
+                                            </li> -->
+
+
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-3">
+									Donate <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-3" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="byproject.html">accessible journey aid</a>
+                                            </li> -->
+										<li class="nav-item">
+											<a class="nav-link" href="../byproject.html?id=0#menu1">Craniofacial
+												surgery</a>
+										</li>
+
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="byproject.html">disaster relief management</a>
+                                            </li> -->
+										<li class="nav-item">
+											<a class="nav-link" href="../byproject.html?id=1#menu2">gift in honor of
+												philip</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../byproject.html?id=2#menu3">nourish hope</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../byproject.html?id=3#menu4">project
+												butterfly center</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../byproject.html?id=4#menu5">director's
+												innovator fund</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../sponsors.html"
+												style="margin-left:10px">sponsors</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="ppl2">Paythrough Paypal</a>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-2">
+									Events <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-2" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<li class="nav-item">
+											<a class="nav-link" href="../5krun4love.html">5krun4love</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../peoplenotproducts.html">people, not
+												products</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="../dance/">Father-Daughter dance</a>
+										</li>
+										<!-- <li class="nav-item">
+                                                <a class="nav-link" href="#">shine fashion show</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">form an online fundraisers</a>
+                                            </li>
+                                             <li class="nav-item">
+                                                <a class="nav-link" href="#">start your own fundraiser event</a>
+                                            </li> -->
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link collapsePagesSideMenu" data-toggle="collapse" href="#inner-1">
+									Other <i class="fas fa-chevron-down"></i>
+								</a>
+								<div id="inner-1" class="collapse sideNavPages sideNavPagesInner">
+									<ul class="navbar-nav mt-2">
+										<li class="nav-item">
+											<a class="nav-link collapsePagesSideMenu" data-toggle="collapse"
+												href="#inner-6">
+												in-kind <i class="fas fa-chevron-down"></i>
+											</a>
+											<div id="inner-6" class="collapse sideNavPages sideNavPagesInner">
+												<ul class="navbar-nav mt-2">
+													<li class="nav-item">
+														<a class="nav-link" href="../inkind.html#medical"
+															style="margin-left:10px">medical supplies</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" href="../inkind.html#goods"
+															style="margin-left:10px">goods/services</a>
+													</li>
+													<!-- <li class="nav-item">
+                                                <a class="nav-link" href="inkind.html#sponsorship" style="margin-left:10px">sponserships</a>
+                                            </li> -->
+													<!-- <li class="nav-item">
+                                                <a class="nav-link" href="inkind.html#partners" style="margin-left:10px">partnerships</a>
+                                            </li> -->
+
+
+												</ul>
+											</div>
+										</li>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../corporate partners.html"
+									style="margin-left:10px">partners</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../vehicledonate.html">vehicle donation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../personalproperty.html">personal property</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../legacy.html">legacy/planned gifts</a>
+							</li>
+
+						</ul>
+					</div>
+				</li>
+
+				</ul>
+			</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../ourstory.html"> OUR STORY </a>
+			</li>
+
+
+			</ul>
+			</nav>
+			<div class="side-footer w-100">
+				<ul class="social-icons-simple white top40">
+					<li><a href="https://www.facebook.com/LoveWithoutReasonUSA/" class="facebook"><i
+								class="fab fa-facebook-f"></i> </a> </li>
+					<li><a href="https://twitter.com/LWRUSA/" class="twitter"><i class="fab fa-twitter"></i> </a>
+					</li>
+					<li><a href="https://www.linkedin.com/company/lovewithoutreason/" class="linkedin"><i
+								class="fab fa-linkedin-in"></i> </a> </li>
+					<li><a href="https://www.instagram.com/lovewithoutreasoninc/" class="insta"><i
+								class="fab fa-instagram"></i> </a> </li>
+					<li><a href="https://www.youtube.com/LoveWithoutReason/" class="youtube"><i
+								class="fab fa-youtube"></i> </a> </li>
+				</ul>
+
+			</div>
+	</div>
+	</div>
+	<div id="close_side_menu" class="tooltip"></div>
+	<!-- End side menu -->
+	</header>
+	<!-- header -->
+	<!-- header -->
+
+
+	<section id="aboutus" class="padding_top ">
+		<div class="container aboutus">
+			<div class="row align-items-center">
+				<div class="col-lg-12 col-md-12 ">
+					<h2 align="center">Find The Pages</h2>
+					<!-- <h3 align="center">Youth Philanthropist of the Year!!! </h3> -->
+					<br>
+				</div>
+
+
+
+
+			</div>
+			<div class="col-lg-12 col-md-12 padding_bottom text-justify">
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6 ">
+						<ul id="menu-site-map" class="menu">
+							<li id="menu-item-7599"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7599">
+								<a href="../index.html">Home</a>
+							</li>
+							<!-- <li id="menu-item-7601"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7601">
+								<a href="../2018-impact/index.html">Global IMPACT</a>
+							</li> -->
+							<li id="menu-item-7602"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7602">
+								<a href="../5krun4love.html">5KRun4Love</a>
+							</li>
+							<li id="menu-item-7603"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7603">
+								<a href="../about/index.html">About</a>
+							</li>
+							<li id="menu-item-7604"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7604">
+								<a href="../executive-board.html">Advisory
+									Board</a>
+							</li>
+							<!-- <li id="menu-item-7605"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7605">
+								<a href="../benny-prasad-concert/index.html">An Evening
+									With Benny and Zanbeni Prasad</a>
+							</li> -->
+							<li id="menu-item-7606"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7606">
+								<a href="../executive-board.html">Board of
+									Directors</a>
+							</li>
+							<!-- <li id="menu-item-7607"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7607">
+								<a href="../request-a-speech/index.html">Book LWR</a>
+							</li> -->
+							<!-- <li id="menu-item-7608"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7608">
+								<a href="../categories/index.html">Categories</a>
+							</li> -->
+							<li id="menu-item-7609"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7609">
+								<a href="../contact.html">Contact</a>
+							</li>
+							<li id="menu-item-7610"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7610">
+								<a href="../Donate/index.html">Contribute</a>
+							</li>
+							<li id="menu-item-7611"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7611">
+								<a href="../Craniofacial.html">Craniofacial
+									Surgeries</a>
+							</li>
+							<li id="menu-item-7612"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7612">
+								<a href="../humantrafficking.html">Disaster
+									Relief Management</a>
+							</li>
+							<li id="menu-item-7613"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7613">
+								<a data-toggle="modal" data-target="#myModal">Donate</a>
+							</li>
+							<li id="menu-item-7614"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7614">
+								<a href="../paypal/index.html">Donate using PayPal</a>
+							</li>
+							<!-- <li id="menu-item-7615"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7615">
+								<a href="../events/index.html">Events</a>
+							</li> -->
+							<!-- <li id="menu-item-7616"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7616">
+								<a href="../fashion-show-gallery/index.html">Fashion
+									Show Gallery</a>
+							</li> -->
+							<!-- <li id="menu-item-7617"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7617">
+								<a href="../get-updates/index.html">Get Updates</a>
+							</li> -->
+							<li id="menu-item-7618"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7618">
+								<a href="../humantrafficking.html">Human
+									Trafficking</a>
+							</li>
+							<li id="menu-item-7619"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7619">
+								<a href="../india-mission/index.html">India</a>
+							</li>
+							<li id="menu-item-7620"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7620">
+								<a href="../India/index.html">India
+									Operations</a>
+							</li>
+							<li id="menu-item-7621"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7621">
+								<a href="../kenya.html">Kenya
+									Operations</a>
+							</li>
+							<!-- <li id="menu-item-7622"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7622">
+								<a href="../locations/index.html">Locations</a>
+							</li> -->
+							<li id="menu-item-7623"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7623">
+								<a href="../whywedo.html">Mission</a>
+							</li>
+							<!-- <li id="menu-item-7624"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7624">
+								<a href="../our-impact/index.html">Our Impact</a>
+							</li> -->
+							
+						
+
+						</ul>
+
+					</div>
+					<div class="col-lg-6 col-md-6 ">
+						<ul id="menu-site-map" class="menu">
+							<li id="menu-item-7625"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7625">
+								<a href="../corporate partners.html">Our Partners</a>
+							</li>
+							<li id="menu-item-7626"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7626">
+								<a href="../ourstory.html">Our Story</a>
+							</li>
+							<li id="menu-item-7627"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7627">
+								<a href="../trustee.html">Our Team</a>
+							</li>
+							<li id="menu-item-7628"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7628">
+								<a href="../whywedo.html#values">Our Values</a>
+							</li>
+							<li id="menu-item-7629"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7629">
+								<a href="../corporate partners.html">Corporate
+									Partners</a>
+							</li>
+							<li id="menu-item-7630"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7630">
+								<a href="../philips-story.html">Philip</a>
+							</li>
+							<li id="menu-item-7631"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7631">
+							<a href="../philips-story.html">Philip&#8217;s
+								Story</a>
+						</li>
+						<li id="menu-item-7632"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7632">
+							<a href="../physician-portal/index.html">Physician
+								Portal</a>
+						</li>
+						<!-- <li id="menu-item-7633"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7633">
+							<a href="../physicians-portal/index.html">Physicians
+								Portal</a>
+						</li> -->
+						<!-- <li id="menu-item-7634"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7634">
+							<a href="../press-releases/index.html">Press
+								Releases</a>
+						</li> -->
+						<!-- <li id="menu-item-7635"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7635">
+							<a href="../privacy-policy/index.html">Privacy
+								Policy</a>
+						</li> -->
+							<!-- <li id="menu-item-7636"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7636">
+								<a href="../pro-life-awareness/index.html">Pro-Life
+									Awareness</a>
+							</li> -->
+							<li id="menu-item-7637"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7637">
+								<a href="../humantrafficking.html#project">Project
+									Butterfly</a>
+							</li>
+							<!-- <li id="menu-item-7638"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7638">
+								<a href="../sponsors.html">Shine
+									Sponsors</a>
+							</li> -->
+							<!-- <li id="menu-item-7639"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7639">
+								<a href="../shine/index.html">Shine! Fashion Show</a>
+							</li> -->
+							<!-- <li id="menu-item-7640"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7640">
+								<a href="../shivamurthys-story/index.html">Shivamurthy’s
+									Story</a>
+							</li> -->
+							<!-- <li id="menu-item-7642"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7642">
+								<a href="../speaking-engagements/index.html">Speaking
+									Engagements</a>
+							</li> -->
+							<li id="menu-item-7643"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7643">
+								<a href="../sponsors.html">Sponsors</a>
+							</li>
+							<!-- <li id="menu-item-7644"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7644">
+								<a href="../summer-smile/index.html">Summer Smiles
+									🙂</a>
+							</li> -->
+							<li id="menu-item-7645"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7645">
+								<a href="../Susan_s Blogs.html">Susan&#8217;s
+									Blogs</a>
+							</li>
+							<!-- <li id="menu-item-7646"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7646">
+								<a href="../testimonies/index.html">Testimonies</a>
+							</li> -->
+							<!-- <li id="menu-item-7648"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7648">
+								<a href="../updates/index.html">Updates</a>
+							</li> -->
+							<li id="menu-item-7649"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7649">
+								<a href="../usa.html">USA
+									Operations</a>
+							</li>
+							<li id="menu-item-7649"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7649">
+								<a href="../zimbabwe.html">zimbabwe
+									Operations</a>
+							</li>
+							
+							<li id="menu-item-7650"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7650">
+								<a href="../getinvolved.html">Video Links</a>
+							</li>
+							<li id="menu-item-7600"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-7600">
+								<a href="../privacy-policy2/index.html">Privacy Policy
+									2</a>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				
+
+
+			</div>
+
+
+
+
+
+		</div>
+
+	</section>
+
+
+	<footer id="site-footer" class=" bgdark padding_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6" style="margin-top:-27px;padding-right:50px">
+					<div class="footer_panel padding_bottom_half bottom20">
+						<!-- <a href="index.html" class=""><img src="images/LWRred.png" alt="Love without reason"></a> -->
+						<p class="whitecolor bottom25"></p>
+						<div class="d-table w-100 address-item whitecolor bottom25">
+							<span class="d-table-cell align-middle" style="padding-right: 8px"><i
+									class="far fa-envelope"></i></span>
+
+							<p class="d-table-cell align-middle bottom0">Mailing Address:<br>
+								P.O. Box 21009<br> Chattanooga, TN, USA 37424
+								<!-- <a class="d-block" href="mailto:web@support.com">web@support.com</a> -->
+							</p>
+						</div>
+						<div class="d-table w-100 address-item whitecolor bottom25">
+							<span class="d-table-cell align-middle" style="padding-right: 8px"><i
+									class="far fa-map"></i></span>
+
+							<p class="d-table-cell align-middle bottom0">USA Office:<br>
+								5600 Brainerd Road <br>Suite WS-3 <br>Chattanooga, TN, USA 37411
+								<!-- <a class="d-block" href="mailto:web@support.com">web@support.com</a> -->
+							</p>
+						</div>
+
+						<div class="d-table w-100 address-item whitecolor bottom25">
+							<span class="d-table-cell align-middle" style="padding-right: 10px"><i
+									class="fas fa-mobile-alt"></i></span>
+
+							<p class="d-table-cell align-middle bottom0">
+								+1 (423) 402 0607
+								<a class="d-block" href="mailto:web@support.com">info@lovewithoutreason.org</a>
+							</p>
+						</div>
+						<ul class="social-icons white wow fadeInUp" data-wow-delay="300ms">
+							<li><a href="https://www.facebook.com/LoveWithoutReasonUSA/" class="facebook"><i
+										class="fab fa-facebook-f"></i> </a> </li>
+							<li><a href="https://twitter.com/LWRUSA/" class="twitter"><i class="fab fa-twitter"></i>
+								</a> </li>
+							<li><a href="https://www.linkedin.com/company/lovewithoutreason/" class="linkedin"><i
+										class="fab fa-linkedin-in"></i> </a> </li>
+							<li><a href="https://www.instagram.com/lovewithoutreasoninc/" class="insta"><i
+										class="fab fa-instagram"></i> </a> </li>
+							<li><a href="https://www.youtube.com/LoveWithoutReason/" class="youtube"><i
+										class="fab fa-youtube"></i> </a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="footer_panel padding_bottom_half bottom20">
+						<h3 class="whitecolor bottom25">Upcoming Events</h3>
+						<ul class="latest_news whitecolor">
+							<!-- <li> <a href="#">Tezpur Medical Camp</a> <span class="date defaultcolor">
+														
+														</span> </li> -->
+							<li> <a href="medicalcamp.html">Great African Adventure </a> <span
+									class="date defaultcolor">2022 Medical Camp </span> </li>
+							<li> <a href="humantrafficking.html#carousel">Project Butterfly </a> <span
+									class="date defaultcolor"></span> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="footer_panel padding_bottom_half bottom20 pl-0 pl-lg-5">
+						<!-- <h3 class="whitecolor bottom25">Our Services</h3> -->
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="ourstory.html">Our Story</a></li>
+							<li><a href="getinvolved.html">Get Involved</a></li>
+							<li><a href="../donate/">Donate</a></li>
+							<!-- <li><a href="pricing.html">Business Planning</a></li> -->
+							<li><a href="contact.html">Contact Us</a></li>
+							<!-- <li><a href="faq.html">Faq's</a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="footer_panel padding_bottom_half bottom20">
+						<a href="../index.html" class=""><img src="../images/LWRred.png" alt="Love without reason"></a>
+					</div>
+				</div>
+				<!--  -->
+			</div>
+		</div>
+	</footer>
+
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center wow fadeIn animated" data-wow-delay="300ms">
+					<p class="m-0 py-3">Copyright © <a href="javascript:void(0)" class="hover-default">Love Without
+							Reason</a>. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Footer ends-->
+	<!--Footer ends-->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<!--Bootstrap Core-->
+	<script src="../js/propper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<!--to view items on reach-->
+	<script src="../js/jquery.appear.js"></script>
+	<!--Owl Slider-->
+	<script src="../js/owl.carousel.min.js"></script>
+	<!--number counters-->
+	<script src="../js/jquery-countTo.js"></script>
+	<!--Parallax Background-->
+	<script src="../js/parallaxie.js"></script>
+	<!--Cubefolio Gallery-->
+	<script src="../js/jquery.cubeportfolio.min.js"></script>
+	<!--Fancybox js-->
+	<script src="../js/jquery.fancybox.min.js"></script>
+	<!--tooltip js-->
+	<script src="../js/tooltipster.min.js"></script>
+	<!--wow js-->
+	<script src="../js/wow.js"></script>
+	<!--Revolution SLider-->
+	<script src="../js/revolution/jquery.themepunch.tools.min.js"></script>
+	<script src="../js/revolution/jquery.themepunch.revolution.min.js"></script>
+	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+	<script src="../js/revolution/extensions/revolution.extension.actions.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.migration.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="../js/revolution/extensions/revolution.extension.video.min.js"></script>
+	<!--custom functions and script-->
+	<script src="../js/functions.js"></script>
+	<script>
+		var form = document.getElementById("ppl");
+
+		document.getElementById("paypalclick").addEventListener("click", function () {
+			form.submit();
+			//  alert();
+		});
+		document.getElementById("ppl1").addEventListener("click", function () {
+			form.submit();
+			//  alert();
+		});
+		document.getElementById("ppl2").addEventListener("click", function () {
+			form.submit();
+			//  alert();
+		});
+	</script>
+</body>
+
+<!-- Mirrored from www.lovewithoutreason.org/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Apr 2021 12:05:29 GMT -->
+
+</html>
