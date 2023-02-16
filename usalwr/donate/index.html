@@ -24,7 +24,66 @@
     <link rel="stylesheet" href="../css/revolution/settings.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../global.css" />
-
+    <script>
+        let response = {
+            country: "IN"
+        }
+        //  $.get("https://ipinfo.io", function (response) {
+        $(window).on('load', function () {
+            let donateButton = document.getElementById("DonateIndia");
+            let donateButtonSlide1 = document.getElementById("DonateSlide1");
+            let donateButtonSlide2 = document.getElementById("DonateSlide2");
+            let donateButtonSlide3 = document.getElementById("DonateSlide3");
+            let donateButtonSlide4 = document.getElementById("DonateSlide4");
+            let donateButtonSlide5 = document.getElementById("DonateSlide5");
+            let paymentModal = document.getElementById("myModal");
+            $(donateButtonSlide1).on('click', function () {
+                if (response.country == "IN") {
+                    $(paymentModal).modal();
+                } else {
+                    window.location.href = "https://lovewithoutreason.org/donate/index.html#donate"
+                }
+            });
+            $(donateButtonSlide2).on('click', function () {
+                if (response.country == "IN") {
+                    $(paymentModal).modal();
+                } else {
+                    window.location.href = "https://lovewithoutreason.org/donate/index.html#donate"
+                }
+            });
+            $(donateButtonSlide3).on('click', function () {
+                if (response.country == "IN") {
+                    $(paymentModal).modal();
+                } else {
+                    window.location.href = "https://lovewithoutreason.org/donate/index.html#donate"
+                }
+            });
+            $(donateButtonSlide4).on('click', function () {
+                if (response.country == "IN") {
+                    $(paymentModal).modal();
+                } else {
+                    window.location.href = "https://lovewithoutreason.org/donate/index.html#donate"
+                }
+            });
+            $(donateButtonSlide5).on('click', function () {
+                if (response.country == "IN") {
+                    $(paymentModal).modal();
+                } else {
+                    window.location.href = "https://lovewithoutreason.org/donate/index.html#donate"
+                }
+            });
+            if (response.country == "IN") {
+                donateButton.classList.add("d-block");
+            }
+            else {
+                donateButton.classList.add("d-none");
+                donateButtonSlide1.classList.add("d-none");
+                donateButtonSlide2.classList.add("d-none");
+                donateButtonSlide3.classList.add("d-none");
+            }
+        })
+               // }, "json")
+    </script>
 
 
     <style>
@@ -938,7 +997,7 @@
                                         <h4 class="text-center"><b>Craniofacial Surgery</b> </h4>
                                     </div><br>
                                     <div class="d-flex justify-content-center">
-                                        <a data-toggle="modal" id="paypalclick" data-target="#myModal"
+                                        <a id="DonateSlide1"
                                             class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
                                     </div>
                                 </div>
@@ -953,8 +1012,8 @@
                                         <h4 class="text-center"><b>The Joy Of A Smile</b> </h4>
                                     </div><br>
                                     <div class="d-flex justify-content-center">
-                                        <a data-toggle="modal" id="paypalclick" data-target="#myModal"
-                                        class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
+                                        <a id="DonateSlide2"
+                                            class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -968,7 +1027,7 @@
                                         <h4 class="text-center"><b>Director's Innovator Fund</b> </h4>
                                     </div><br>
                                     <div class="d-flex justify-content-center">
-                                        <a data-toggle="modal" id="paypalclick" data-target="#myModal"
+                                        <a id="DonateSlide3"
                                             class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
                                     </div>
                                 </div>
@@ -983,8 +1042,8 @@
                                         <h4 class="text-center"><b>Project Butterfly Center</b> </h4>
                                     </div><br>
                                     <div class="d-flex justify-content-center">
-                                        <a data-toggle="modal" id="paypalclick" data-target="#myModal"
-                                        class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
+                                        <a id="DonateSlide4"
+                                            class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -998,7 +1057,7 @@
                                         <h4 class="text-center"><b>Gift In Honor Of Philip</b> </h4>
                                     </div><br>
                                     <div class="d-flex justify-content-center">
-                                        <a data-toggle="modal" id="paypalclick" data-target="#myModal"
+                                        <a id="DonateSlide5"
                                             class="button btnsecondary gradient-btn  mb-sm-0 mb-4">Donate</a>
                                     </div>
                                 </div>
@@ -1347,8 +1406,12 @@
                             <!-- <li> <a href="#">Tezpur Medical Camp</a> <span class="date defaultcolor">
                                                 
                                                 </span> </li> -->
-                            <li> <a href="../medicalcamp.html">Great African Adventure </a> <span class="date ">2022
-                                    Medical Camp </span> </li>
+                            <li> <a href="https://lovewithoutreason.ticketspice.com/people-not-products">People Not
+                                    Products </a></li>
+                            <li> <a href="https://lovewithoutreason.ticketspice.com/father-daughter-dance">Father
+                                    Daughter Dance</a>
+                            <li> <a href="../medicalcamp.html">Great African Adventure </a> <span
+                                    class="date defaultcolor">2023 Medical Camp </span> </li>
                             <li> <a href="../humantrafficking.html#carousel">Project Butterfly </a> <span
                                     class="date defaultcolor"></span> </li>
                         </ul>

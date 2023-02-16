@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +22,7 @@
     <link href="../images/favicon.ico" rel="icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
     <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
     <link rel="stylesheet" href="../owl.carousel.css">
     <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
@@ -69,11 +71,79 @@
     <meta name="instagram:description" content="Love Without Reason is committed to offering world-class, science-based medical camps which
                         treat and screen those born with congenital craniofacial differences." />
     <meta name="instagram:image" content="https://lovewithoutreason.org/current/Header1.jpg" />
-    <meta name="description"
-        content="Love Without Reason is committed to offering world-class, science-based medical camps which
-                        treat and screen those born with congenital craniofacial differences,join,learn,kenya,donate,from,african adventure,great african,great african adventure,project butterfly,chlidren donate,we do.">
-    <meta name="keywords"
-        content="love,lovewithoutreason,philip,craniofacial,cleft-free,Anti-Human trafficking, Cleft, Cleft lip, Cleft palate, Charity,medical,camp,join,learn,kenya,love,donate,from,medical camp,african Adventure,great african,great african adventure,project butterfly,love without reason,children donate,we do">
+    <meta name="description" content="Love Without Reason is committed to offering world-class, science-based medical camps which
+                        treat and screen those born with congenital craniofacial differences.">
+    <meta name="keywords" content="love,lovewithoutreason,philip,craniofacial,cleft-free,Anti-Human trafficking, Cleft, Cleft lip, Cleft palate, Charity,father-daughter dance, chattanooga, tennesse
+, valentines day, charity dance, end human trafficking ,events">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        let response={
+            country:"IN"
+        }
+              //  $.get("https://ipinfo.io", function (response) {
+                $(window).on('load',function (){
+                    let donateButton = document.getElementById("DonateIndia");
+        
+                    let donateButtonSlide1 = document.getElementById("DonateSlide1");
+        
+                    let donateButtonSlide2 = document.getElementById("DonateSlide2");
+        
+                    let donateButtonSlide3 = document.getElementById("DonateSlide3");
+        
+                    let paymentModal = document.getElementById("myModal");
+        
+                    $(donateButtonSlide1).on('click', function () {
+        
+                        if (response.country == "IN") {
+        
+                            $(paymentModal).modal();
+        
+                        }
+        
+                    });
+        
+                    $(donateButtonSlide2).on('click', function () {
+        
+                        if (response.country == "IN") {
+        
+                            $(paymentModal).modal();
+        
+                        }
+        
+                    });
+        
+                    $(donateButtonSlide3).on('click', function () {
+        
+                        if (response.country == "IN") {
+        
+                            $(paymentModal).modal();
+        
+                        }
+        
+                    });
+        
+                    if (response.country == "IN") {
+        
+                        donateButton.classList.add("d-block");
+        
+                    }
+        
+                    else {
+        
+                        donateButton.classList.add("d-none");
+        
+                        donateButtonSlide1.classList.add("d-none");
+        
+                        donateButtonSlide2.classList.add("d-none");
+        
+                        donateButtonSlide3.classList.add("d-none");
+        
+                    }
+                })
+        
+               // }, "json")
+    </script>
+ 
     <script>
         $(document).scroll(function () {
             let scrollval = $(this).scrollTop()
@@ -84,12 +154,6 @@
                 $('.donate-slide').fadeOut();
             }
         })
-    </script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-        $(function () {
-            $("#navbar").load("../navbar/navbar.html");
-        });
     </script>
     <style>
         @media screen and (max-width: 768px) {
@@ -652,11 +716,6 @@
             border-bottom: none !important;
             padding: none;
         }
-
-
-        #head {
-            font-size: 50px;
-        }
     </style>
     <!-- <script>
         $(document).ready(function () {
@@ -669,6 +728,7 @@
 <body>
 
 
+   
     <div class="loader">
         <div class="loader-inner">
             <div class="cssload-loader"></div>
@@ -700,7 +760,7 @@
 
 
 
-    <!-- <div class="donate-slide visible-palate" style="display: none;">
+    <!-- <div class="donate-slide visible-palate" id="DonateIndia">
         <div class="donate-trigger">
             <ul class=" ">
                 <li>
@@ -724,8 +784,7 @@
             <ul class=" ">
                 <li>
                     <i class="flaticon-test-tube"></i>
-                    <img src="../images/paypal.png" alt="icon" class="menu-icon flaticon-test-tube"
-                        style="bottom: 2px;">
+                    <img src="images/paypal.png" alt="icon" class="menu-icon flaticon-test-tube" style="bottom: 2px;">
 
                 </li>
             </ul>
@@ -797,7 +856,7 @@
                                         <div class="text-center" style="margin-top: 10%;">
                                             <a href="https://www.paypal.com/biz/fund?id=NJMPFAWUKAHR4"
                                                 style="color: #036;">Paythrough&nbsp;<img src="images/paypal.png"
-                                                    height="32px" width="32px" alt="paypal">&nbsp;PAYPAL</a>
+                                                    height="32px" width="32px">&nbsp;PAYPAL</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1062,7 +1121,7 @@
                                 data-responsive_offset="on" data-start="1500"
                                 data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
 
-                                <a class="btn btn-primary" href="https://lovewithoutreason.org/index.html#donate"
+                                <a class="btn btn-primary" id="DonateSlide1"
                                     style="background-color: #7d0000;color:#fff">Donate</a>
 
                             </div>
@@ -1101,7 +1160,7 @@
                                 data-responsive_offset="on" data-start="1500"
                                 data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
 
-                                <a class="btn btn-primary" href="https://lovewithoutreason.org/index.html#donate"
+                                <a class="btn btn-primary" id="DonateSlide2"
                                     style="background-color: #7d0000;color:#fff">Donate</a>
 
                             </div>
@@ -1141,7 +1200,7 @@
                                 data-responsive_offset="on" data-start="1500"
                                 data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
 
-                                <a class="btn btn-primary" href="https://lovewithoutreason.org/index.html#donate"
+                                <a class="btn btn-primary" id="DonateSlide3"
                                     style="background-color: #7d0000;color:#fff">Donate</a>
 
                             </div>
@@ -1273,7 +1332,8 @@
                                 <div class="et_pb_blurb_content">
                                     <div class="et_pb_blurb_container">
                                         <div class="et_pb_blurb_description">
-                                            <img src="../images/peoplenotproduct.jpg" alt="Snow" style="width:100%"> <br><br><br>
+                                            <img src="../images/peoplenotproduct.jpg" alt="Snow" style="width:100%">
+                                            <br><br><br>
                                             <h4 style="font-size: 18px;text-align: center">
                                                 <span><Strong>People Not Products <br>
                                                     </Strong>
@@ -1308,7 +1368,8 @@
                                 <div class="et_pb_blurb_content">
                                     <div class="et_pb_blurb_container">
                                         <div class="et_pb_blurb_description">
-                                            <img src="../current/father&daughter.png" alt="Snow" style="width:100%"> <br>
+                                            <img src="../current/father&daughter.png" alt="Snow" style="width:100%">
+                                            <br>
                                             <h4 style="font-size: 18px;text-align: center"><br><br>
                                                 <span><Strong>Father Daughter Dance
                                                         <br>
@@ -1759,13 +1820,15 @@
                     <div class="et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top ">
                         <div class="et_pb_blurb_content1">
                             <div class="et_pb_blurb_container">
-                                <h2 style="color: rgba(253, 190,19);font-size: 15px;"><span><strong>Holistic
+                                <h2 style="color: rgba(253, 190,19);font-size: 15px;text-align: center;">
+                                    <span><strong>Holistic
                                             Strategy</strong> </span></h2>
-                                <h5 style="color:#fff;font-size: 15px;"><span>Holistic treatment</span></h5>
+                                <h5 style="color:#fff;font-size: 15px;text-align: center;"><span>Holistic
+                                        treatment</span></h5>
                                 <p> <a class="btn btn-primary1 " href="../Carinofacial/Craniofacial.html#holistic"
                                         target="_black"
                                         style="
-                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;">learn
+                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;margin-left: 30%;">learn
                                         more
                                     </a>
                                 </p>
@@ -1779,13 +1842,15 @@
                         class=" et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
                         <div class="et_pb_blurb_content1">
                             <div class="et_pb_blurb_container">
-                                <h2 style="color:rgba(253, 190,19);font-size: 15px;"><span><strong>Linking Surgery &
+                                <h2 style="color:rgba(253, 190,19);font-size: 15px;text-align: center;">
+                                    <span><strong>Linking Surgery &
                                             Trafficking</strong> </span></h2>
-                                <h5 style="color:#fff;font-size: 15px;"><span>Connecting the Dots</span></h5>
+                                <h5 style="color:#fff;font-size: 15px;text-align: center;"><span>Connecting the
+                                        Dots</span></h5>
                                 <p> <a class="btn btn-primary1 " href="../Carinofacial/Craniofacial.html#linking"
                                         target="_black"
                                         style="
-                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;">learn
+                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;margin-left: 30%;">learn
                                         more
                                     </a>
                                 </p>
@@ -1823,12 +1888,15 @@
                         class=" et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
                         <div class="et_pb_blurb_content1">
                             <div class="et_pb_blurb_container">
-                                <h2 style="color:rgba(253, 190,19);font-size: 15px;"><span><strong>Project
+                                <h2 style="color:rgba(253, 190,19);font-size: 15px;text-align: center;">
+                                    <span><strong>Project
                                             Butterfly</strong> </span></h2>
-                                <h5 style="color:#fff;font-size: 15px;"><span>Education & Recovery</span></h5>
-                                <p> <a class="btn btn-primary1 " href="../humantrafficing/humantrafficking.html#project" target="_black"
+                                <h5 style="color:#fff;font-size: 15px;text-align: center;"><span>Education &
+                                        Recovery</span></h5>
+                                <p> <a class="btn btn-primary1 " href="../humantrafficing/humantrafficking.html#project"
+                                        target="_black"
                                         style="
-                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;">learn
+                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;margin-left: 30%;">learn
                                         more
                                     </a>
                                 </p>
@@ -1842,13 +1910,15 @@
                         class=" et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
                         <div class="et_pb_blurb_content1">
                             <div class="et_pb_blurb_container">
-                                <h2 style="color:rgba(253, 190,19);font-size: 15px;"><span><strong>Disaster Relief
+                                <h2 style="color:rgba(253, 190,19);font-size: 15px;text-align: center;">
+                                    <span><strong>Disaster Relief
                                             Management</strong> </span></h2>
-                                <h5 style="color:#fff;font-size: 15px;"><span>The Pandemic</span></h5>
-                                <p> <a class="btn btn-primary1 " href="../humantrafficing/humantrafficking.html#butterfly"
-                                        target="_black"
+                                <h5 style="color:#fff;font-size: 15px;text-align: center;"><span>The Pandemic</span>
+                                </h5>
+                                <p> <a class="btn btn-primary1 "
+                                        href="../humantrafficing/humantrafficking.html#butterfly" target="_black"
                                         style="
-                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;">learn
+                                    border: 3px solid #fff;background-color:none;color:#fff;font-size:15px;border-radius: 4px;margin-left: 30%;">learn
                                         more
                                     </a>
                                 </p>
@@ -1983,7 +2053,7 @@
 
     <section id="bg-counters" class="padding bg-counters parallax">
         <h1 class="text-capitalize font-bold whitecolor text-center ">GLOBAL IMPACT</h1>
-        <p class="text-capitalize font-bold whitecolor text-center padding_bottom_half"> 
+        <p class="text-capitalize font-bold whitecolor text-center padding_bottom_half">
             <!-- <a class="  btn btn-primary1 "
                 href="https://www.lovewithoutreason.org/2018-impact/"
                 style="
@@ -2130,8 +2200,8 @@
                                                 </span> </li> -->
                             <li> <a href="../medicalcamp/medicalcamp.html">Great African Adventure </a> <span
                                     class="date defaultcolor">2022 Medical Camp </span> </li>
-                            <li> <a href="../humantrafficing/humantrafficking.html#carousel">Project Butterfly </a> <span
-                                    class="date defaultcolor"></span> </li>
+                            <li> <a href="../humantrafficing/humantrafficking.html#carousel">Project Butterfly </a>
+                                <span class="date defaultcolor"></span> </li>
                         </ul>
                     </div>
                 </div>
@@ -2151,7 +2221,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer_panel padding_bottom_half bottom20">
-                        <a href="../index/index.html" class=""><img src="../images/LWRred.png" alt="Love without reason"></a>
+                        <a href="../index/index.html" class=""><img src="../images/LWRred.png"
+                                alt="Love without reason"></a>
                     </div>
                 </div>
                 <!--  -->
@@ -2205,9 +2276,9 @@
     <script src="../js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="../js/revolution/extensions/revolution.extension.video.min.js"></script>
     <!--custom functions and script-->
-    <script src="../js/functions.js"></script>
+     <script src="../js/functions.js"></script>
     <script>
-
+                                   
         !function (t, e) { var a = document.head, n = document.createElement("script"); n.type = "text/javascript", n.src = "https://widget.harnessapp.com/harness-widget-v2.js", n.onreadystatechange = e, n.onload = e, a.appendChild(n) }(0, function () { window.HarnessWidget.init({ charity_id: "1e5b28ede2342eb864b7" }) });
     </script>
 
